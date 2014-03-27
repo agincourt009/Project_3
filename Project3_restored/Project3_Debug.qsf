@@ -40,7 +40,7 @@ set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C20F484C7
 set_global_assignment -name TOP_LEVEL_ENTITY Project3
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:58:56  MARCH 05, 2014"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:35:55  FEBRUARY 26, 2014"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -494,19 +494,19 @@ set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_global_assignment -name USE_CONFIGURATION_DEVICE ON
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
-set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS OFF
 set_global_assignment -name TIMEQUEST_DO_REPORT_TIMING ON
 set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL OFF
 set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS ON
 set_global_assignment -name ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS OFF
 set_global_assignment -name SAVE_DISK_SPACE OFF
-set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name SMART_RECOMPILE OFF
 set_global_assignment -name CYCLONEII_OPTIMIZATION_TECHNIQUE SPEED
 set_global_assignment -name OPTIMIZE_HOLD_TIMING "IO PATHS AND MINIMUM TPD PATHS"
-set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
-set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
-set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
-set_global_assignment -name PHYSICAL_SYNTHESIS_EFFORT EXTRA
+set_global_assignment -name FITTER_EFFORT "FAST FIT"
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC OFF
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION OFF
+set_global_assignment -name PHYSICAL_SYNTHESIS_EFFORT FAST
 set_global_assignment -name REMOVE_REDUNDANT_LOGIC_CELLS ON
 set_global_assignment -name AUTO_RAM_TO_LCELL_CONVERSION ON
 set_global_assignment -name ALLOW_ANY_RAM_SIZE_FOR_RECOGNITION ON
@@ -514,23 +514,23 @@ set_global_assignment -name ALLOW_ANY_ROM_SIZE_FOR_RECOGNITION ON
 set_global_assignment -name PLACEMENT_EFFORT_MULTIPLIER 10
 set_global_assignment -name ROUTER_EFFORT_MULTIPLIER 10
 set_global_assignment -name ENABLE_SIGNALTAP OFF
-set_global_assignment -name USE_SIGNALTAP_FILE Debug.stp
+set_global_assignment -name USE_SIGNALTAP_FILE DEbug.stp
 set_global_assignment -name ROUTER_TIMING_OPTIMIZATION_LEVEL MAXIMUM
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH 100 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name FITTER_EARLY_TIMING_ESTIMATE_MODE PESSIMISTIC
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name MISC_FILE Lectures.dpf
-set_global_assignment -name VERILOG_FILE Project3.v
-set_global_assignment -name QIP_FILE Pll.qip
+set_global_assignment -name MIF_FILE Test2.mif
+set_global_assignment -name MIF_FILE Sorter2.mif
+set_global_assignment -name MIF_FILE Regs.mif
+set_global_assignment -name MIF_FILE DataMem.mif
 set_global_assignment -name VERILOG_FILE SevenSeg.v
 set_global_assignment -name SDC_FILE Timing.sdc
-set_global_assignment -name SOURCE_FILE Sorter2.a32
-set_global_assignment -name MIF_FILE Sorter2.mif
-set_global_assignment -name SOURCE_FILE Test2.a32
-set_global_assignment -name MIF_FILE Test2.mif
-set_global_assignment -name MIF_FILE DataMem.mif
-set_global_assignment -name MIF_FILE Regs.mif
+set_global_assignment -name VERILOG_FILE Project3.v
+set_global_assignment -name QIP_FILE Pll.qip
+set_global_assignment -name SIGNALTAP_FILE DEbug.stp
+set_global_assignment -name SLD_FILE DEbug_auto_stripped.stp
