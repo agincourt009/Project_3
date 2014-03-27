@@ -1,6 +1,10 @@
 <sld_project_info>
   <project>
+<<<<<<< HEAD
     <hash md5_digest_80b="3da4d8337168ddce1812"/>
+=======
+    <hash md5_digest_80b="45583458cf81d0656817"/>
+>>>>>>> 97e481bd4c8a91e8c30afa3bdaa4a961ed525f84
   </project>
   <file_info>
     <file device="EP2C20F484C7" path="Project3-Optimize.sof" usercode="0xFFFFFFFF"/>

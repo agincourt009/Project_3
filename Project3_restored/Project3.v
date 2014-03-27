@@ -167,8 +167,15 @@ module Project3(SW,KEY,LEDR,LEDG,HEX0,HEX1,HEX2,HEX3,CLOCK_50);
 		pcplus_F;
 	wire mispred_B=(pcgood_B!=incpc)&&!isnop_A;
 
-	// TODO: This is a good place to generate the flush_? signals
 	reg stall_F, flush_D, isnop_A;
+	always @ (dobranch_A or isjump_A)begin
+		stall_F = 1'b0;
+		flush_D = 1'b0;
+		if(isjump_A)
+			stall_F <= 1'b1;
+		else if (dobranch_A)
+			flush_D <= 1'b1;
+	end
 	
 	wire [(DBITS-1):0] wmemval_M = regs[memvaladdr];
 	reg wrmem_M, wrreg_M;
