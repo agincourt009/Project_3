@@ -1,5 +1,5 @@
 Restore Archived Project report for Project3-Optimize
-Thu Mar 27 13:21:55 2014
+Thu Mar 27 16:55:08 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Thu Mar 27 13:21:55 2014 ;
+; Restore Archived Project Status ; Successful - Thu Mar 27 16:55:08 2014 ;
 ; Revision Name                   ; Project3-Optimize                     ;
 ; Top-level Entity Name           ; Project3                              ;
 ; Family                          ; Cyclone II                            ;
@@ -50,9 +50,9 @@ Info: Successfully restored 'C:/Users/Joe/Documents/GitHub/Project_3/Project3.qa
 Info: Generated report 'Project3-Optimize.restore.rpt'
 Info (23030): Evaluation of Tcl script c:/altera/13.0sp1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus II 64-Bit Shell was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 276 megabytes
-    Info: Processing ended: Thu Mar 27 13:21:56 2014
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 275 megabytes
+    Info: Processing ended: Thu Mar 27 16:55:08 2014
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
