@@ -247,13 +247,14 @@ module Project3(SW,KEY,LEDR,LEDG,HEX0,HEX1,HEX2,HEX3,CLOCK_50);
 	   OP1_CMPR:
 				{aluimm_D,alufunc_A     ,selaluout_D,selmemout_D,selpcplus_D,wrreg_M}=
 				{    1'b0,{1'b1,op2_i_D},       1'b1,       1'b0,       1'b0,   1'b1};
-		// TODO: Write the rest of the decoding code
 		OP1_CMPI:
-				{flag}= 
-				{1'b0};
+				{aluimm_D,alufunc_A     ,selaluout_D,selmemout_D,selpcplus_D,wrreg_M}=
+				{    1'b1,{1'b1,op2_t_D},       1'b1,       1'b0,       1'b0,   1'b1};
 		OP1_BCOND:
-				{flag}=
-				{1'b0};
+				{aluimm_D,alufunc_A, selaluout_D, selmemout_D, selpcplus_D}=
+				{	  1'b1,	5'b0, 		1'b1, 			1'b0, 		1'b1};
+				
+		// TODO: Write the rest of the decoding code
 		OP1_SW:
 				{flag}=
 				{1'b0};
@@ -263,76 +264,7 @@ module Project3(SW,KEY,LEDR,LEDG,HEX0,HEX1,HEX2,HEX3,CLOCK_50);
 		OP1_JAL:
 				{flag}=
 				{1'b0};
-		// I think this is correct...
-		OP2_ALU_ADD:
-				{flag}=
-				{1'b0};
-		OP2_ALU_SUB:
-				{flag}=
-				{1'b0};
-		OP2_ALU_AND:
-				{flag}=
-				{1'b0};
-		OP2_ALU_OR:
-				{flag}=
-				{1'b0};
-		OP2_ALU_XOR:
-				{flag}=
-				{1'b0};
-		OP2_ALU_NAND:
-				{flag}=
-				{1'b0};
-		OP2_ALU_NOR:
-				{flag}=
-				{1'b0};
-		OP2_ALU_NXOR:
-				{flag}=
-				{1'b0};
-		OP2_ALU_MVHI:
-				{flag}=
-				{1'b0};
-		OP2_CMP_F:
-				{flag}=
-				{1'b0};
-		OP2_CMP_EQ:
-				{flag}=
-				{1'b0};
-		OP2_CMP_LT:
-				{flag}=
-				{1'b0};
-		OP2_CMP_LTE:
-				{flag}=
-				{1'b0};
-		OP2_CMP_EQZ:
-				{flag}=
-				{1'b0};
-		OP2_CMP_LTZ:
-				{flag}=
-				{1'b0};
-		OP2_CMP_LTEZ:
-				{flag}=
-				{1'b0};
-		OP2_CMP_T:
-				{flag}=
-				{1'b0};
-		OP2_CMP_NE:
-				{flag}=
-				{1'b0};
-		OP2_CMP_GTE:
-				{flag}=
-				{1'b0};
-		OP2_CMP_GT:
-				{flag}=
-				{1'b0};
-		OP2_CMP_NEZ:
-				{flag}=
-				{1'b0};
-		OP2_CMP_GTEZ:
-				{flag}=
-				{1'b0};
-		OP2_CMP_GTZ:
-				{flag}=
-				{1'b0};
+		
 		default:  ;
 	 endcase
   end
