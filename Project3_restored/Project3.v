@@ -70,6 +70,8 @@ module Project3(SW,KEY,LEDR,LEDG,HEX0,HEX1,HEX2,HEX3,CLOCK_50);
 	   PC<=STARTPC;
 	 else if(mispred_B)
 	   PC<=pcgood_B;
+	 else if(flush_D)
+		PC<=pc_D;
 	 else if(!stall_F)
       PC<=pcpred_F;
   end
@@ -110,15 +112,15 @@ module Project3(SW,KEY,LEDR,LEDG,HEX0,HEX1,HEX2,HEX3,CLOCK_50);
 	wire [(DBITS-1):0] regval2_D=regs[rregno2_D];
 	wire [(DBITS-1):0] sxtimm = {{(DBITS-IMMBITS){rawimm_D[IMMBITS-1]}},rawimm_D};
  
-	reg LdMem, aluimm_D, isbranch_D;
-	wire [(DBITS-1):0]memaddr;
+	reg LdMem, aluimm_D, isbranch_D, selaluout_D;
+	wire [(DBITS-1):0] memaddr;
 	wire [(DBITS-1):0] aluin1_A = regval1_D;
 	wire [(DBITS-1):0] aluin2_A;
 	reg [4:0] alufunc_A;
 	assign aluin2_A = aluimm_D?sxtimm: regval2_D;
 	// Now the actual ALU
-	reg signed [(DBITS-1):0] aluout_A;
-	always @(alufunc_A or aluin1_A or aluin2_A)
+	reg signed [(DBITS-1):0] aluout_A, alures;
+	always @(alufunc_A or aluin1_A or aluin2_A)begin
 	case(alufunc_A)
 		{1'b0,OP2_ALU_ADD }: aluout_A=aluin1_A+aluin2_A;
 		{1'b0,OP2_ALU_SUB }: aluout_A=aluin1_A-aluin2_A;
@@ -145,37 +147,49 @@ module Project3(SW,KEY,LEDR,LEDG,HEX0,HEX1,HEX2,HEX3,CLOCK_50);
 		{1'b1,OP2_CMP_GTZ }: aluout_A={31'b0,aluin1_A> 32'b0};
 	default:  aluout_A={DBITS{1'bX}};
 	endcase
-
-	assign memaddr = LdMem? aluout_A:{DBITS{1'bX}} ;
-	reg dobranch_A, isjump_A;
+	end
+	always @(selaluout_D or aluout_A)begin
+		alures <= {DBITS{1'bX}};
+		if(selaluout_D)
+			alures <= aluout_A;
+	end
+	
+	assign memaddr = LdMem? alures:{DBITS{1'bX}} ;
+	reg [(DBITS-1):0] OldPC;
+	reg dobranch_A, isjump_A, storePC;
 	wire [(DBITS-1):0] brtarg_A,jmptarg_A;
-	wire [(DBITS-1):0] incpc = pcpred_F;
-	wire [(DBITS-1):0] multpc = 4*pcpred_F;
+	wire [(DBITS-1):0] incpc = pcpred_D;
+	wire [(DBITS-1):0] multpc = 4*pcpred_D;
 	reg [(DBITS-1):0] brtarg;
+	always @(isjump_A)begin
+		storePC <= 1'b0;
+		if(isjump_A)
+			storePC <= 1'b1;
+	end
 	always @(incpc or multpc)
 		brtarg = incpc+multpc;
-	always @(isbranch_D or aluout_A)
+	always @(isbranch_D or alures)
 		if(isbranch_D)
-			dobranch_A <= aluout_A[0];
+			dobranch_A <= alures[0];
 		else
 			dobranch_A <= 1'b0;
 	assign brtarg_A = brtarg;
-	assign jmptarg_A = isjump_A?aluout_A: {DBITS{1'bX}};
+	assign jmptarg_A = isjump_A?alures: {DBITS{1'bX}};
 	wire [(DBITS-1):0] pcgood_B=
 		dobranch_A?brtarg_A:
 		isjump_A?jmptarg_A:
-		pcplus_F;
+		pcplus_D;
 	wire mispred_B=(pcgood_B!=incpc)&&!isnop_A;
 
 	reg stall_F, flush_D, isnop_A;
-	always @ (dobranch_A or isjump_A)begin
+	always @ (isjump_A)begin
 		stall_F = 1'b0;
 		flush_D = 1'b0;
 		if(isjump_A)
 			stall_F <= 1'b1;
-		else if (dobranch_A)
-			flush_D <= 1'b1;
 	end
+	always @(isnop_D)
+		isnop_A <= isnop_D;
 	
 	wire [(DBITS-1):0] wmemval_M = regs[memvaladdr];
 	reg wrmem_M, wrreg_M;
@@ -225,11 +239,11 @@ module Project3(SW,KEY,LEDR,LEDG,HEX0,HEX1,HEX2,HEX3,CLOCK_50);
 			regs[wregno_M]<=wregval_M;
 
   // Decoding logic
-  reg isnop_D, selaluout_D, selmemout_D, selpcplus_D, flag; // flag is a placeholder, remove later
+  reg isnop_D, selmemout_D, selpcplus_D, flag; // flag is a placeholder, remove later
   reg [(DBITS-1):0] wregno_D;
   always @(inst_D or op1_D or op2_i_D or op2_d_D or op2_t_D or rd_D or reset or flush_D) begin
     {aluimm_D,alufunc_A, LdMem}=
-	 {    1'bX,    5'hXX, 1'bX};
+	 {    1'bX,    5'hXX, 1'b0};
 	 {isbranch_D,isjump_A,isnop_D,wrmem_M}=
 	 {      1'b0,    1'b0,   1'b0,   1'b0};
     {selaluout_D,selmemout_D,selpcplus_D,wregno_D,wrreg_M}=
@@ -252,12 +266,12 @@ module Project3(SW,KEY,LEDR,LEDG,HEX0,HEX1,HEX2,HEX3,CLOCK_50);
 				{    1'b1,{1'b1,op2_t_D},       1'b1,       1'b0,       1'b0,   1'b1};
 		OP1_BCOND:
 				{aluimm_D,alufunc_A, selaluout_D, selmemout_D, selpcplus_D}=
-				{	  1'b1,	5'b0, 		1'b1, 			1'b0, 		1'b1};
-				
-		// TODO: Write the rest of the decoding code
+				{	  1'b1,{1'b1, op2_d_D}, 1'b1, 	1'b0, 		1'b1};
 		OP1_SW:
-				{flag}=
-				{1'b0};
+				{aluimm_D, alufunc_A, selaluout_D, selmemout_D, selpcplus_D, wrmem_M, LdMem}=
+				{	1'b1,			5'b0,			1'b1,			1'b0,				1'b1,		1'b1,		1'b1};		
+		// TODO: Write the rest of the decoding code
+
 		OP1_LW:
 				{flag}=
 				{1'b0};
