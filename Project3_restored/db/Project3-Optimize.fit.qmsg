@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 { "Warning" "WQCU_PARALLEL_NO_LICENSE" "" "Parallel compilation is not licensed and has been disabled" {  } {  } 0 20028 "Parallel compilation is not licensed and has been disabled" 0 0 "Fitter" 0 -1 1395884130910 ""}
 { "Info" "IMPP_MPP_USER_DEVICE" "Project3-Optimize EP2C20F484C7 " "Selected device EP2C20F484C7 for design \"Project3-Optimize\"" {  } {  } 0 119006 "Selected device %2!s! for design \"%1!s!\"" 0 0 "Fitter" 0 -1 1395884130945 ""}
 { "Info" "ICUT_CUT_USING_OPERATING_CONDITION" "Low junction temperature 0 degrees C " "Low junction temperature is 0 degrees C" {  } {  } 0 21077 "%1!s! is %2!s!" 0 0 "Fitter" 0 -1 1395884130986 ""}
@@ -67,6 +68,8 @@
 { "Info" "IRDB_WROTE_SUPPRESSED_MSGS" "C:/Users/Joe/Documents/GitHub/Project_3/Project3_restored/Project3-Optimize.fit.smsg " "Generated suppressed messages file C:/Users/Joe/Documents/GitHub/Project_3/Project3_restored/Project3-Optimize.fit.smsg" {  } {  } 0 144001 "Generated suppressed messages file %1!s!" 0 0 "Fitter" 0 -1 1395884141355 ""}
 { "Info" "IQEXE_ERROR_COUNT" "Fitter 0 s 340 s Quartus II 64-Bit " "Quartus II 64-Bit Fitter was successful. 0 errors, 340 warnings" { { "Info" "IQEXE_END_PEAK_VSIZE_MEMORY" "621 " "Peak virtual memory: 621 megabytes" {  } {  } 0 0 "Peak virtual memory: %1!s! megabytes" 0 0 "Quartus II" 0 -1 1395884141747 ""} { "Info" "IQEXE_END_BANNER_TIME" "Wed Mar 26 21:35:41 2014 " "Processing ended: Wed Mar 26 21:35:41 2014" {  } {  } 0 0 "Processing ended: %1!s!" 0 0 "Quartus II" 0 -1 1395884141747 ""} { "Info" "IQEXE_ELAPSED_TIME" "00:00:12 " "Elapsed time: 00:00:12" {  } {  } 0 0 "Elapsed time: %1!s!" 0 0 "Quartus II" 0 -1 1395884141747 ""} { "Info" "IQEXE_ELAPSED_CPU_TIME" "00:00:05 " "Total CPU time (on all processors): 00:00:05" {  } {  } 0 0 "Total CPU time (on all processors): %1!s!" 0 0 "Quartus II" 0 -1 1395884141747 ""}  } {  } 0 0 "%6!s! %1!s! was successful. %2!d! error%3!s!, %4!d! warning%5!s!" 0 0 "Fitter" 0 -1 1395884141747 ""}
 =======
+=======
+>>>>>>> 97e481bd4c8a91e8c30afa3bdaa4a961ed525f84
 { "Warning" "WQCU_PARALLEL_NO_LICENSE" "" "Parallel compilation is not licensed and has been disabled" {  } {  } 0 20028 "Parallel compilation is not licensed and has been disabled" 0 0 "Fitter" 0 -1 1395886336606 ""}
 { "Info" "IMPP_MPP_USER_DEVICE" "Project3-Optimize EP2C20F484C7 " "Selected device EP2C20F484C7 for design \"Project3-Optimize\"" {  } {  } 0 119006 "Selected device %2!s! for design \"%1!s!\"" 0 0 "Fitter" 0 -1 1395886336613 ""}
 { "Info" "ICUT_CUT_USING_OPERATING_CONDITION" "Low junction temperature 0 degrees C " "Low junction temperature is 0 degrees C" {  } {  } 0 21077 "%1!s! is %2!s!" 0 0 "Fitter" 0 -1 1395886336641 ""}
@@ -134,4 +137,7 @@
 { "Warning" "WFITCC_FITCC_IGNORED_ASSIGNMENT" "" "Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information." {  } {  } 0 171167 "Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information." 0 0 "Fitter" 0 -1 1395886339547 ""}
 { "Info" "IRDB_WROTE_SUPPRESSED_MSGS" "C:/Users/Kaitlin/Documents/GitHub/Project_3/Project3_restored/Project3-Optimize.fit.smsg " "Generated suppressed messages file C:/Users/Kaitlin/Documents/GitHub/Project_3/Project3_restored/Project3-Optimize.fit.smsg" {  } {  } 0 144001 "Generated suppressed messages file %1!s!" 0 0 "Fitter" 0 -1 1395886339658 ""}
 { "Info" "IQEXE_ERROR_COUNT" "Fitter 0 s 340 s Quartus II 64-Bit " "Quartus II 64-Bit Fitter was successful. 0 errors, 340 warnings" { { "Info" "IQEXE_END_PEAK_VSIZE_MEMORY" "630 " "Peak virtual memory: 630 megabytes" {  } {  } 0 0 "Peak virtual memory: %1!s! megabytes" 0 0 "Quartus II" 0 -1 1395886339807 ""} { "Info" "IQEXE_END_BANNER_TIME" "Wed Mar 26 22:12:19 2014 " "Processing ended: Wed Mar 26 22:12:19 2014" {  } {  } 0 0 "Processing ended: %1!s!" 0 0 "Quartus II" 0 -1 1395886339807 ""} { "Info" "IQEXE_ELAPSED_TIME" "00:00:03 " "Elapsed time: 00:00:03" {  } {  } 0 0 "Elapsed time: %1!s!" 0 0 "Quartus II" 0 -1 1395886339807 ""} { "Info" "IQEXE_ELAPSED_CPU_TIME" "00:00:04 " "Total CPU time (on all processors): 00:00:04" {  } {  } 0 0 "Total CPU time (on all processors): %1!s!" 0 0 "Quartus II" 0 -1 1395886339807 ""}  } {  } 0 0 "%6!s! %1!s! was successful. %2!d! error%3!s!, %4!d! warning%5!s!" 0 0 "Fitter" 0 -1 1395886339807 ""}
+<<<<<<< HEAD
+>>>>>>> 97e481bd4c8a91e8c30afa3bdaa4a961ed525f84
+=======
 >>>>>>> 97e481bd4c8a91e8c30afa3bdaa4a961ed525f84
