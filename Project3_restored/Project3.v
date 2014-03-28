@@ -239,7 +239,7 @@ module Project3(SW,KEY,LEDR,LEDG,HEX0,HEX1,HEX2,HEX3,CLOCK_50);
 			regs[wregno_M]<=wregval_M;
 
   // Decoding logic
-  reg isnop_D, selmemout_D, selpcplus_D, flag; // flag is a placeholder, remove later
+  reg isnop_D, selmemout_D, selpcplus_D;
   reg [(DBITS-1):0] wregno_D;
   always @(inst_D or op1_D or op2_i_D or op2_d_D or op2_t_D or rd_D or reset or flush_D) begin
     {aluimm_D,alufunc_A, LdMem}=
@@ -269,16 +269,13 @@ module Project3(SW,KEY,LEDR,LEDG,HEX0,HEX1,HEX2,HEX3,CLOCK_50);
 				{	  1'b1,{1'b1, op2_d_D}, 1'b1, 	1'b0, 		1'b1};
 		OP1_SW:
 				{aluimm_D, alufunc_A, selaluout_D, selmemout_D, selpcplus_D, wrmem_M, LdMem}=
-				{	1'b1,			5'b0,			1'b1,			1'b0,				1'b1,		1'b1,		1'b1};		
-		// TODO: Write the rest of the decoding code
-
+				{	1'b1,			5'b0,			1'b1,			1'b0,				1'b1,		1'b1,		1'b1};
 		OP1_LW:
-				{flag}=
-				{1'b0};
+				{aluimm_D, alufunc_A, selaluout_D, selmemout_D, selpcplus_D, wrmem_M, wrreg_M}=
+				{	1'b1,			5'b0,			1'b1,			1'b1,				1'b1,		1'b1,		1'b1};
 		OP1_JAL:
-				{flag}=
-				{1'b0};
-		
+				{aluimm_D, alufunc_A, selaluout_D, selmemout_D, selpcplus_D, isjump_A, wrreg_M}=
+				{	1'b1,			5'b0,			1'b1,			1'b0,				1'b0,		1'b1,		1'b1};	
 		default:  ;
 	 endcase
   end
