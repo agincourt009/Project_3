@@ -1,5 +1,5 @@
 Fitter report for Project3-Optimize
-Fri Mar 28 16:24:33 2014
+Fri Mar 28 17:47:40 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -66,15 +66,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Mar 28 16:24:33 2014           ;
+; Fitter Status                      ; Successful - Fri Mar 28 17:47:40 2014           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Project3-Optimize                               ;
 ; Top-level Entity Name              ; Project3                                        ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 538 / 18,752 ( 3 % )                            ;
-;     Total combinational functions  ; 538 / 18,752 ( 3 % )                            ;
+; Total logic elements               ; 505 / 18,752 ( 3 % )                            ;
+;     Total combinational functions  ; 505 / 18,752 ( 3 % )                            ;
 ;     Dedicated logic registers      ; 33 / 18,752 ( < 1 % )                           ;
 ; Total registers                    ; 33                                              ;
 ; Total pins                         ; 61 / 315 ( 19 % )                               ;
@@ -147,63 +147,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Netlist Optimizations                                                                                                                                             ;
-+-------------------------+----------+--------------------+---------------------+-----------+----------------+------------------+------------------+-----------------------+
-; Node                    ; Action   ; Operation          ; Reason              ; Node Port ; Node Port Name ; Destination Node ; Destination Port ; Destination Port Name ;
-+-------------------------+----------+--------------------+---------------------+-----------+----------------+------------------+------------------+-----------------------+
-; Equal2~12               ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; PC~39                   ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; comb~1                  ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~41                 ; Deleted  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~43                 ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~43_RESYN0_BDD1     ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~50                 ; Deleted  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~188                ; Deleted  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~189                ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~189_RESYN2_BDD3    ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~189_RESYN4_BDD5    ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; multpc[4]~0             ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; multpc[4]~1             ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; Equal2~32               ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; Equal2~32_RESYN56_BDD57 ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; Equal2~32_RESYN58_BDD59 ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; Mux67~2                 ; Deleted  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; Mux73~2                 ; Deleted  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; PC~43                   ; Deleted  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; PC~44                   ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; PC~44_RESYN48_BDD49     ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; PC~44_RESYN50_BDD51     ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; PC~45                   ; Deleted  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; PC~46                   ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; PC~46_RESYN60_BDD61     ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; PC~46_RESYN62_BDD63     ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; PC~47                   ; Deleted  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; PC~48                   ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; PC~48_RESYN52_BDD53     ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; PC~48_RESYN54_BDD55     ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; comb~11                 ; Deleted  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; comb~12                 ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; comb~12_RESYN32_BDD33   ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; comb~12_RESYN34_BDD35   ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; comb~13                 ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; comb~13_RESYN36_BDD37   ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; comb~13_RESYN38_BDD39   ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; comb~17                 ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; comb~17_RESYN40_BDD41   ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; comb~17_RESYN42_BDD43   ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~8                  ; Deleted  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~14                 ; Deleted  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~15                 ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~15_RESYN22_BDD23   ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~15_RESYN24_BDD25   ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~43                 ; Deleted  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~43_RESYN0_BDD1     ; Deleted  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~45                 ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~45_RESYN26_BDD27   ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~45_RESYN28_BDD29   ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-; imem~45_RESYN30_BDD31   ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
-+-------------------------+----------+--------------------+---------------------+-----------+----------------+------------------+------------------+-----------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Netlist Optimizations                                                                                                                                         ;
++---------------------+----------+--------------------+---------------------+-----------+----------------+------------------+------------------+-----------------------+
+; Node                ; Action   ; Operation          ; Reason              ; Node Port ; Node Port Name ; Destination Node ; Destination Port ; Destination Port Name ;
++---------------------+----------+--------------------+---------------------+-----------+----------------+------------------+------------------+-----------------------+
+; Equal2~0            ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; imem~36             ; Deleted  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; imem~37             ; Deleted  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; imem~39             ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; imem~39_RESYN0_BDD1 ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; imem~39_RESYN2_BDD3 ; Created  ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; multpc[4]~0         ; Modified ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
++---------------------+----------+--------------------+---------------------+-----------+----------------+------------------+------------------+-----------------------+
 
 
 +-----------------------------------------------------------------------------------------------+
@@ -543,8 +499,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 629 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 629 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 605 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 605 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -567,7 +523,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 624     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 600     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 5       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -583,26 +539,26 @@ The pin-out file can be found in C:/Users/Kaitlin/Documents/GitHub/Project_3/Pro
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 538 / 18,752 ( 3 % )  ;
-;     -- Combinational with no register       ; 505                   ;
+; Total logic elements                        ; 505 / 18,752 ( 3 % )  ;
+;     -- Combinational with no register       ; 472                   ;
 ;     -- Register only                        ; 0                     ;
 ;     -- Combinational with a register        ; 33                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 422                   ;
-;     -- 3 input functions                    ; 64                    ;
-;     -- <=2 input functions                  ; 52                    ;
+;     -- 4 input functions                    ; 408                   ;
+;     -- 3 input functions                    ; 50                    ;
+;     -- <=2 input functions                  ; 47                    ;
 ;     -- Register only                        ; 0                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 494                   ;
+;     -- normal mode                          ; 461                   ;
 ;     -- arithmetic mode                      ; 44                    ;
 ;                                             ;                       ;
 ; Total registers*                            ; 33 / 19,649 ( < 1 % ) ;
 ;     -- Dedicated logic registers            ; 33 / 18,752 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 897 ( 0 % )       ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 42 / 1,172 ( 4 % )    ;
+; Total LABs:  partially or completely used   ; 38 / 1,172 ( 3 % )    ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 61 / 315 ( 19 % )     ;
 ;     -- Clock pins                           ; 6 / 8 ( 75 % )        ;
@@ -617,11 +573,11 @@ The pin-out file can be found in C:/Users/Kaitlin/Documents/GitHub/Project_3/Pro
 ; JTAGs                                       ; 0 / 1 ( 0 % )         ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
-; Average interconnect usage (total/H/V)      ; 0% / 0% / 1%          ;
-; Peak interconnect usage (total/H/V)         ; 3% / 3% / 3%          ;
-; Maximum fan-out                             ; 105                   ;
-; Highest non-global fan-out                  ; 105                   ;
-; Total fan-out                               ; 2063                  ;
+; Average interconnect usage (total/H/V)      ; 1% / 0% / 1%          ;
+; Peak interconnect usage (total/H/V)         ; 6% / 5% / 7%          ;
+; Maximum fan-out                             ; 95                    ;
+; Highest non-global fan-out                  ; 95                    ;
+; Total fan-out                               ; 1955                  ;
 ; Average fan-out                             ; 3.24                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -635,25 +591,25 @@ The pin-out file can be found in C:/Users/Kaitlin/Documents/GitHub/Project_3/Pro
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 538 / 18752 ( 3 % )  ; 0 / 18752 ( 0 % )              ;
-;     -- Combinational with no register       ; 505                  ; 0                              ;
+; Total logic elements                        ; 505 / 18752 ( 3 % )  ; 0 / 18752 ( 0 % )              ;
+;     -- Combinational with no register       ; 472                  ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
 ;     -- Combinational with a register        ; 33                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 422                  ; 0                              ;
-;     -- 3 input functions                    ; 64                   ; 0                              ;
-;     -- <=2 input functions                  ; 52                   ; 0                              ;
+;     -- 4 input functions                    ; 408                  ; 0                              ;
+;     -- 3 input functions                    ; 50                   ; 0                              ;
+;     -- <=2 input functions                  ; 47                   ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 494                  ; 0                              ;
+;     -- normal mode                          ; 461                  ; 0                              ;
 ;     -- arithmetic mode                      ; 44                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Total registers                             ; 33                   ; 0                              ;
 ;     -- Dedicated logic registers            ; 33 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 42 / 1172 ( 4 % )    ; 0 / 1172 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 38 / 1172 ( 3 % )    ; 0 / 1172 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 61                   ; 0                              ;
@@ -670,8 +626,8 @@ The pin-out file can be found in C:/Users/Kaitlin/Documents/GitHub/Project_3/Pro
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 2062                 ; 67                             ;
-;     -- Registered Connections               ; 716                  ; 0                              ;
+;     -- Total Connections                    ; 1954                 ; 67                             ;
+;     -- Registered Connections               ; 678                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 66                             ;
@@ -1368,7 +1324,7 @@ Note: User assignments will override these defaults. The user specified values a
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------+--------------+
 ; Compilation Hierarchy Node      ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                       ; Library Name ;
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------+--------------+
-; |Project3                       ; 538 (538)   ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 61   ; 0            ; 505 (505)    ; 0 (0)             ; 33 (33)          ; |Project3                                 ; work         ;
+; |Project3                       ; 505 (505)   ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 61   ; 0            ; 472 (472)    ; 0 (0)             ; 33 (33)          ; |Project3                                 ; work         ;
 ;    |Pll:pll|                    ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Project3|Pll:pll                         ; work         ;
 ;       |altpll:altpll_component| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Project3|Pll:pll|altpll:altpll_component ; work         ;
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------+--------------+
@@ -1380,20 +1336,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------------+---------------+-----------------------+-----+
 ; Name     ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
 +----------+----------+---------------+---------------+-----------------------+-----+
-; SW[0]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; SW[1]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; SW[2]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; SW[3]    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; SW[4]    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; SW[5]    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; SW[6]    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; SW[7]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; SW[8]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; SW[9]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; KEY[0]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; KEY[1]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; KEY[2]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; KEY[3]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; LEDR[0]  ; Output   ; --            ; --            ; --                    ; --  ;
 ; LEDR[1]  ; Output   ; --            ; --            ; --                    ; --  ;
 ; LEDR[2]  ; Output   ; --            ; --            ; --                    ; --  ;
@@ -1440,6 +1382,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HEX3[4]  ; Output   ; --            ; --            ; --                    ; --  ;
 ; HEX3[5]  ; Output   ; --            ; --            ; --                    ; --  ;
 ; HEX3[6]  ; Output   ; --            ; --            ; --                    ; --  ;
+; SW[0]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; KEY[0]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[9]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[8]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[7]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[6]    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; SW[5]    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; SW[4]    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; SW[3]    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; KEY[3]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[2]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; KEY[2]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[1]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; KEY[1]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; CLOCK_50 ; Input    ; --            ; --            ; --                    ; --  ;
 +----------+----------+---------------+---------------+-----------------------+-----+
 
@@ -1450,19 +1406,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout ; Pad To Core Index ; Setting ;
 +---------------------+-------------------+---------+
 ; SW[0]               ;                   ;         ;
-; SW[1]               ;                   ;         ;
-; SW[2]               ;                   ;         ;
-; SW[3]               ;                   ;         ;
-; SW[4]               ;                   ;         ;
-; SW[5]               ;                   ;         ;
-; SW[6]               ;                   ;         ;
-; SW[7]               ;                   ;         ;
-; SW[8]               ;                   ;         ;
-; SW[9]               ;                   ;         ;
 ; KEY[0]              ;                   ;         ;
-; KEY[1]              ;                   ;         ;
-; KEY[2]              ;                   ;         ;
+; SW[9]               ;                   ;         ;
+; SW[8]               ;                   ;         ;
+; SW[7]               ;                   ;         ;
+; SW[6]               ;                   ;         ;
+; SW[5]               ;                   ;         ;
+; SW[4]               ;                   ;         ;
+; SW[3]               ;                   ;         ;
 ; KEY[3]              ;                   ;         ;
+; SW[2]               ;                   ;         ;
+; KEY[2]              ;                   ;         ;
+; SW[1]               ;                   ;         ;
+; KEY[1]              ;                   ;         ;
 ; CLOCK_50            ;                   ;         ;
 +---------------------+-------------------+---------+
 
@@ -1492,231 +1448,210 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+---------+
 ; Name                                    ; Fan-Out ;
 +-----------------------------------------+---------+
-; PC[4]                                   ; 105     ;
-; PC[3]                                   ; 95      ;
-; PC[2]                                   ; 94      ;
-; PC[5]                                   ; 85      ;
-; PC[6]                                   ; 81      ;
-; PC[8]                                   ; 76      ;
-; isjump_A~1                              ; 66      ;
-; PC[7]                                   ; 66      ;
-; imem~15                                 ; 50      ;
+; PC[4]                                   ; 95      ;
+; PC[2]                                   ; 86      ;
+; PC[3]                                   ; 84      ;
+; PC[6]                                   ; 78      ;
+; PC[5]                                   ; 77      ;
+; PC[7]                                   ; 72      ;
+; PC[8]                                   ; 72      ;
+; isjump_A~1                              ; 65      ;
 ; Pll:pll|altpll:altpll_component|_locked ; 32      ;
-; Equal2~32                               ; 29      ;
-; imem~0                                  ; 26      ;
-; imem~49                                 ; 23      ;
-; Mux71~0                                 ; 20      ;
-; Mux71~1                                 ; 19      ;
-; aluin2_A[31]~6                          ; 18      ;
-; Decoder2~0                              ; 18      ;
-; imem~56                                 ; 17      ;
-; Add2~30                                 ; 17      ;
-; Mux71~4                                 ; 16      ;
-; Mux64~8                                 ; 16      ;
-; aluimm_D~1                              ; 16      ;
-; Mux112~1                                ; 15      ;
-; Mux64~7                                 ; 14      ;
-; Mux112~3                                ; 14      ;
+; Mux130~23                               ; 31      ;
+; Decoder2~0                              ; 31      ;
+; Equal2~39                               ; 28      ;
+; Mux128~3                                ; 27      ;
+; aluimm_D~0                              ; 26      ;
+; Mux131~20                               ; 26      ;
+; imem~34                                 ; 26      ;
+; Mux129~34                               ; 23      ;
+; imem~45                                 ; 19      ;
+; imem~58                                 ; 17      ;
+; imem~0                                  ; 17      ;
+; Mux94~2                                 ; 12      ;
 ; HexOut[0]                               ; 12      ;
-; Mux80~2                                 ; 11      ;
-; Mux115~20                               ; 11      ;
-; Mux81~0                                 ; 9       ;
-; Mux89~0                                 ; 9       ;
-; Mux90~2                                 ; 9       ;
-; Mux64~1                                 ; 9       ;
-; Mux90~0                                 ; 9       ;
-; Mux114~3                                ; 9       ;
-; imem~55                                 ; 9       ;
-; Mux115~21                               ; 8       ;
-; Mux113~48                               ; 8       ;
-; Mux113~46                               ; 8       ;
-; imem~25                                 ; 8       ;
-; PC[12]                                  ; 6       ;
-; PC[11]                                  ; 6       ;
+; Mux95~34                                ; 10      ;
+; Mux131~21                               ; 9       ;
+; Mux95~35                                ; 9       ;
+; Mux94~1                                 ; 9       ;
+; imem~23                                 ; 9       ;
+; Mux81~5                                 ; 8       ;
+; imem~170                                ; 8       ;
+; Mux86~3                                 ; 8       ;
+; Mux94~0                                 ; 8       ;
+; Mux129~32                               ; 8       ;
+; Mux81~6                                 ; 7       ;
+; Mux67~0                                 ; 7       ;
+; Mux80~0                                 ; 7       ;
+; Add2~32                                 ; 6       ;
+; Mux81~0                                 ; 6       ;
+; imem~13                                 ; 6       ;
 ; PC[10]                                  ; 6       ;
+; PC[11]                                  ; 6       ;
+; PC[12]                                  ; 6       ;
 ; PC[9]                                   ; 6       ;
-; Mux112~4                                ; 5       ;
-; aluin2_A[10]~12                         ; 4       ;
-; aluin2_A[7]~11                          ; 4       ;
+; Mux85~0                                 ; 5       ;
+; Mux84~1                                 ; 5       ;
+; imem~125                                ; 5       ;
+; imem~38                                 ; 5       ;
 ; PC~30                                   ; 4       ;
 ; mispred_B                               ; 4       ;
-; Mux64~12                                ; 4       ;
-; aluin2_A[0]~10                          ; 4       ;
-; imem~116                                ; 4       ;
-; imem~104                                ; 4       ;
-; imem~79                                 ; 4       ;
-; imem~70                                 ; 4       ;
-; imem~1                                  ; 4       ;
-; Mux69~2                                 ; 3       ;
-; Mux70~2                                 ; 3       ;
+; imem~165                                ; 4       ;
+; Mux86~2                                 ; 4       ;
+; imem~124                                ; 4       ;
+; imem~94                                 ; 4       ;
+; imem~73                                 ; 4       ;
+; Equal2~35                               ; 3       ;
+; Equal2~8                                ; 3       ;
 ; PC[1]                                   ; 3       ;
-; Equal2~13                               ; 3       ;
-; Equal2~12                               ; 3       ;
-; Equal2~11                               ; 3       ;
-; Equal2~9                                ; 3       ;
 ; PC[0]                                   ; 3       ;
-; Mux81~1                                 ; 3       ;
-; Mux84~0                                 ; 3       ;
-; Mux80~1                                 ; 3       ;
-; Mux79~2                                 ; 3       ;
-; Mux71~7                                 ; 3       ;
-; Mux71~6                                 ; 3       ;
-; Mux95~34                                ; 3       ;
-; aluin2_A[3]~9                           ; 3       ;
-; aluin2_A[2]~8                           ; 3       ;
-; aluin2_A[1]~7                           ; 3       ;
-; imem~177                                ; 3       ;
+; Mux92~1                                 ; 3       ;
+; Mux92~0                                 ; 3       ;
 ; Mux91~1                                 ; 3       ;
 ; Mux91~0                                 ; 3       ;
-; aluin2_A[4]~5                           ; 3       ;
+; Mux93~1                                 ; 3       ;
+; Mux93~0                                 ; 3       ;
+; Mux82~2                                 ; 3       ;
 ; Mux82~1                                 ; 3       ;
-; Mux82~0                                 ; 3       ;
-; aluin2_A[13]~4                          ; 3       ;
-; Mux83~1                                 ; 3       ;
-; Mux83~0                                 ; 3       ;
-; aluin2_A[12]~3                          ; 3       ;
-; imem~167                                ; 3       ;
+; Mux90~1                                 ; 3       ;
+; Mux90~0                                 ; 3       ;
 ; Mux87~1                                 ; 3       ;
 ; Mux87~0                                 ; 3       ;
-; aluin2_A[8]~2                           ; 3       ;
-; imem~157                                ; 3       ;
-; Mux89~2                                 ; 3       ;
-; Mux89~1                                 ; 3       ;
-; aluin2_A[6]~1                           ; 3       ;
-; Mux90~3                                 ; 3       ;
-; Mux114~5                                ; 3       ;
-; Mux90~1                                 ; 3       ;
-; Mux115~19                               ; 3       ;
-; aluin2_A[5]~0                           ; 3       ;
-; imem~78                                 ; 3       ;
-; imem~77                                 ; 3       ;
-; aluimm_D~0                              ; 3       ;
-; imem~7                                  ; 3       ;
-; multpc[31]~54                           ; 3       ;
-; multpc[30]~52                           ; 3       ;
+; Mux66~1                                 ; 3       ;
+; Mux65~3                                 ; 3       ;
+; Mux67~2                                 ; 3       ;
+; Mux69~2                                 ; 3       ;
+; Mux72~3                                 ; 3       ;
+; Mux73~1                                 ; 3       ;
+; Mux78~2                                 ; 3       ;
+; Mux77~1                                 ; 3       ;
+; Mux76~2                                 ; 3       ;
+; Mux75~1                                 ; 3       ;
+; Mux74~2                                 ; 3       ;
+; Mux79~1                                 ; 3       ;
+; Mux94~4                                 ; 3       ;
+; Mux94~3                                 ; 3       ;
+; Mux80~2                                 ; 3       ;
+; Mux80~1                                 ; 3       ;
+; imem~185                                ; 3       ;
+; imem~184                                ; 3       ;
+; Mux95~40                                ; 3       ;
+; aluin2_A[0]~0                           ; 3       ;
+; Mux83~2                                 ; 3       ;
+; Mux83~1                                 ; 3       ;
+; imem~183                                ; 3       ;
+; Mux81~4                                 ; 3       ;
+; Mux81~2                                 ; 3       ;
+; imem~169                                ; 3       ;
+; Mux84~0                                 ; 3       ;
+; imem~162                                ; 3       ;
+; imem~152                                ; 3       ;
+; imem~144                                ; 3       ;
+; imem~135                                ; 3       ;
+; imem~122                                ; 3       ;
+; imem~118                                ; 3       ;
+; Mux129~33                               ; 3       ;
+; imem~62                                 ; 3       ;
+; imem~57                                 ; 3       ;
+; imem~49                                 ; 3       ;
+; imem~32                                 ; 3       ;
+; imem~6                                  ; 3       ;
+; imem~5                                  ; 3       ;
+; imem~4                                  ; 3       ;
+; incpc[31]~2                             ; 3       ;
+; incpc[30]~0                             ; 3       ;
+; multpc[29]~50                           ; 3       ;
+; multpc[28]~48                           ; 3       ;
+; multpc[27]~46                           ; 3       ;
 ; multpc[26]~44                           ; 3       ;
-; multpc[24]~40                           ; 3       ;
-; multpc[23]~38                           ; 3       ;
-; multpc[22]~36                           ; 3       ;
+; multpc[25]~42                           ; 3       ;
 ; multpc[14]~20                           ; 3       ;
 ; multpc[13]~18                           ; 3       ;
 ; multpc[12]~16                           ; 3       ;
 ; multpc[11]~14                           ; 3       ;
 ; multpc[9]~10                            ; 3       ;
-; multpc[5]~2                             ; 3       ;
-; PC~46_RESYN60_BDD61                     ; 2       ;
-; PC~48_RESYN52_BDD53                     ; 2       ;
-; PC~44_RESYN48_BDD49                     ; 2       ;
-; Mux115~23                               ; 2       ;
-; Mux115~22                               ; 2       ;
-; Mux113~50                               ; 2       ;
-; Mux113~49                               ; 2       ;
-; Equal2~29                               ; 2       ;
-; Equal2~28                               ; 2       ;
+; multpc[8]~8                             ; 3       ;
+; Add2~30                                 ; 3       ;
+; imem~191                                ; 2       ;
+; Mux95~43                                ; 2       ;
+; Mux84~2                                 ; 2       ;
+; Mux85~1                                 ; 2       ;
+; Equal2~30                               ; 2       ;
 ; Equal2~27                               ; 2       ;
-; comb~17                                 ; 2       ;
-; comb~16                                 ; 2       ;
 ; Equal2~26                               ; 2       ;
-; comb~13                                 ; 2       ;
-; comb~12                                 ; 2       ;
 ; Equal2~25                               ; 2       ;
-; comb~10                                 ; 2       ;
-; comb~7                                  ; 2       ;
 ; Equal2~24                               ; 2       ;
+; comb~9                                  ; 2       ;
+; comb~8                                  ; 2       ;
+; Equal2~23                               ; 2       ;
+; Equal2~22                               ; 2       ;
+; Equal2~21                               ; 2       ;
+; comb~7                                  ; 2       ;
+; comb~6                                  ; 2       ;
 ; PC[31]                                  ; 2       ;
 ; PC[28]                                  ; 2       ;
 ; PC[29]                                  ; 2       ;
 ; PC[30]                                  ; 2       ;
-; Mux76~3                                 ; 2       ;
-; comb~6                                  ; 2       ;
-; Equal2~18                               ; 2       ;
+; Equal2~20                               ; 2       ;
+; comb~5                                  ; 2       ;
+; comb~4                                  ; 2       ;
+; comb~3                                  ; 2       ;
 ; PC[27]                                  ; 2       ;
 ; PC[26]                                  ; 2       ;
-; Equal2~17                               ; 2       ;
+; Equal2~13                               ; 2       ;
+; comb~2                                  ; 2       ;
+; comb~1                                  ; 2       ;
 ; PC[24]                                  ; 2       ;
 ; PC[25]                                  ; 2       ;
+; PC[15]                                  ; 2       ;
+; PC[16]                                  ; 2       ;
+; PC[17]                                  ; 2       ;
 ; PC[18]                                  ; 2       ;
 ; PC[19]                                  ; 2       ;
 ; PC[20]                                  ; 2       ;
 ; PC[21]                                  ; 2       ;
 ; PC[22]                                  ; 2       ;
 ; PC[23]                                  ; 2       ;
-; Equal2~15                               ; 2       ;
-; Equal2~14                               ; 2       ;
-; comb~5                                  ; 2       ;
-; comb~4                                  ; 2       ;
-; comb~3                                  ; 2       ;
-; comb~2                                  ; 2       ;
-; comb~1                                  ; 2       ;
-; PC[17]                                  ; 2       ;
-; Mux78~2                                 ; 2       ;
-; PC[13]                                  ; 2       ;
+; Mux95~41                                ; 2       ;
 ; PC[14]                                  ; 2       ;
-; PC[15]                                  ; 2       ;
-; PC[16]                                  ; 2       ;
-; Equal2~7                                ; 2       ;
-; Equal2~6                                ; 2       ;
-; Equal2~1                                ; 2       ;
-; comb~0                                  ; 2       ;
-; Mux86~0                                 ; 2       ;
-; Mux88~1                                 ; 2       ;
-; Mux64~19                                ; 2       ;
-; Mux88~0                                 ; 2       ;
-; Mux85~1                                 ; 2       ;
-; Mux64~17                                ; 2       ;
-; Mux85~0                                 ; 2       ;
-; Mux80~0                                 ; 2       ;
-; Mux92~1                                 ; 2       ;
-; Mux92~0                                 ; 2       ;
-; Mux94~1                                 ; 2       ;
-; Mux94~0                                 ; 2       ;
-; Mux93~1                                 ; 2       ;
-; Mux93~0                                 ; 2       ;
-; Mux73~1                                 ; 2       ;
-; Mux78~1                                 ; 2       ;
-; Mux74~1                                 ; 2       ;
-; Mux75~0                                 ; 2       ;
-; Mux77~1                                 ; 2       ;
-; Mux70~1                                 ; 2       ;
-; Mux66~0                                 ; 2       ;
-; Mux67~1                                 ; 2       ;
-; Mux76~0                                 ; 2       ;
-; Mux69~1                                 ; 2       ;
-; Mux64~10                                ; 2       ;
-; Mux112~5                                ; 2       ;
-; Mux71~3                                 ; 2       ;
-; imem~174                                ; 2       ;
-; imem~166                                ; 2       ;
+; PC[13]                                  ; 2       ;
+; Mux86~4                                 ; 2       ;
+; aluin2_A[2]~3                           ; 2       ;
+; Mux89~1                                 ; 2       ;
+; Mux89~0                                 ; 2       ;
+; imem~189                                ; 2       ;
+; imem~188                                ; 2       ;
+; imem~187                                ; 2       ;
+; imem~186                                ; 2       ;
+; isjump_A~0                              ; 2       ;
+; Mux71~1                                 ; 2       ;
+; aluin2_A[1]~2                           ; 2       ;
+; aluin2_A[3]~1                           ; 2       ;
+; imem~182                                ; 2       ;
+; Mux81~1                                 ; 2       ;
 ; imem~164                                ; 2       ;
-; imem~155                                ; 2       ;
-; imem~154                                ; 2       ;
-; imem~152                                ; 2       ;
-; imem~150                                ; 2       ;
-; imem~146                                ; 2       ;
-; imem~143                                ; 2       ;
-; Mux112~2                                ; 2       ;
-; imem~105                                ; 2       ;
-; imem~103                                ; 2       ;
-; imem~92                                 ; 2       ;
-; imem~87                                 ; 2       ;
-; imem~86                                 ; 2       ;
-; imem~82                                 ; 2       ;
-; imem~81                                 ; 2       ;
-; Mux114~2                                ; 2       ;
-; Mux114~1                                ; 2       ;
-; imem~54                                 ; 2       ;
-; imem~44                                 ; 2       ;
-; imem~39                                 ; 2       ;
-; imem~36                                 ; 2       ;
-; imem~34                                 ; 2       ;
-; imem~6                                  ; 2       ;
-; imem~5                                  ; 2       ;
-; incpc[31]~2                             ; 2       ;
-; incpc[30]~0                             ; 2       ;
-; multpc[29]~50                           ; 2       ;
-; multpc[28]~48                           ; 2       ;
-; multpc[27]~46                           ; 2       ;
-; multpc[25]~42                           ; 2       ;
+; imem~151                                ; 2       ;
+; imem~127                                ; 2       ;
+; imem~120                                ; 2       ;
+; imem~117                                ; 2       ;
+; imem~116                                ; 2       ;
+; imem~115                                ; 2       ;
+; Mux131~19                               ; 2       ;
+; Mux131~18                               ; 2       ;
+; imem~72                                 ; 2       ;
+; imem~60                                 ; 2       ;
+; imem~59                                 ; 2       ;
+; imem~53                                 ; 2       ;
+; imem~35                                 ; 2       ;
+; imem~14                                 ; 2       ;
+; imem~12                                 ; 2       ;
+; imem~9                                  ; 2       ;
+; imem~3                                  ; 2       ;
+; multpc[31]~54                           ; 2       ;
+; multpc[30]~52                           ; 2       ;
+; multpc[24]~40                           ; 2       ;
+; multpc[23]~38                           ; 2       ;
+; multpc[22]~36                           ; 2       ;
 ; multpc[21]~34                           ; 2       ;
 ; multpc[20]~32                           ; 2       ;
 ; multpc[19]~30                           ; 2       ;
@@ -1725,63 +1660,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; multpc[16]~24                           ; 2       ;
 ; multpc[15]~22                           ; 2       ;
 ; multpc[10]~12                           ; 2       ;
-; multpc[8]~8                             ; 2       ;
 ; multpc[7]~6                             ; 2       ;
 ; multpc[6]~4                             ; 2       ;
-; PC~46_RESYN62_BDD63                     ; 1       ;
-; Equal2~32_RESYN58_BDD59                 ; 1       ;
-; Equal2~32_RESYN56_BDD57                 ; 1       ;
-; PC~48_RESYN54_BDD55                     ; 1       ;
-; PC~44_RESYN50_BDD51                     ; 1       ;
-; comb~17_RESYN42_BDD43                   ; 1       ;
-; comb~17_RESYN40_BDD41                   ; 1       ;
-; comb~13_RESYN38_BDD39                   ; 1       ;
-; comb~13_RESYN36_BDD37                   ; 1       ;
-; comb~12_RESYN34_BDD35                   ; 1       ;
-; comb~12_RESYN32_BDD33                   ; 1       ;
-; imem~45_RESYN30_BDD31                   ; 1       ;
-; imem~45_RESYN28_BDD29                   ; 1       ;
-; imem~45_RESYN26_BDD27                   ; 1       ;
-; imem~15_RESYN24_BDD25                   ; 1       ;
-; imem~15_RESYN22_BDD23                   ; 1       ;
-; imem~189_RESYN4_BDD5                    ; 1       ;
-; imem~189_RESYN2_BDD3                    ; 1       ;
+; multpc[5]~2                             ; 2       ;
+; Add2~22                                 ; 2       ;
+; Add2~20                                 ; 2       ;
+; Add2~18                                 ; 2       ;
+; Add2~14                                 ; 2       ;
+; imem~39_RESYN2_BDD3                     ; 1       ;
+; imem~39_RESYN0_BDD1                     ; 1       ;
 ; CLOCK_50                                ; 1       ;
-; Mux114~7                                ; 1       ;
-; Mux114~6                                ; 1       ;
+; Mux129~36                               ; 1       ;
+; Mux129~35                               ; 1       ;
+; Mux131~24                               ; 1       ;
+; Mux131~23                               ; 1       ;
+; Mux130~25                               ; 1       ;
+; Mux130~24                               ; 1       ;
 ; imem~193                                ; 1       ;
 ; imem~192                                ; 1       ;
-; imem~191                                ; 1       ;
 ; imem~190                                ; 1       ;
-; imem~189                                ; 1       ;
-; imem~187                                ; 1       ;
-; imem~186                                ; 1       ;
-; imem~185                                ; 1       ;
-; imem~184                                ; 1       ;
-; Mux115~25                               ; 1       ;
-; Mux115~24                               ; 1       ;
-; imem~183                                ; 1       ;
-; imem~182                                ; 1       ;
-; imem~181                                ; 1       ;
-; imem~180                                ; 1       ;
-; imem~179                                ; 1       ;
-; imem~178                                ; 1       ;
-; Mux95~37                                ; 1       ;
-; Mux95~36                                ; 1       ;
-; Mux95~13                                ; 1       ;
-; Mux95~6                                 ; 1       ;
-; Mux95~3                                 ; 1       ;
-; Mux95~35                                ; 1       ;
-; Mux95~10                                ; 1       ;
-; Mux95~11                                ; 1       ;
-; Mux95~9                                 ; 1       ;
-; Mux115~3                                ; 1       ;
-; Mux113~29                               ; 1       ;
-; Mux113~26                               ; 1       ;
-; Mux113~32                               ; 1       ;
-; Mux113~6                                ; 1       ;
-; Mux113~3                                ; 1       ;
-; Mux113~9                                ; 1       ;
+; Mux95~47                                ; 1       ;
+; Mux95~46                                ; 1       ;
+; Mux95~45                                ; 1       ;
+; Mux95~44                                ; 1       ;
+; Mux95~33                                ; 1       ;
+; Mux95~5                                 ; 1       ;
+; Mux95~21                                ; 1       ;
+; Mux95~20                                ; 1       ;
+; Mux131~3                                ; 1       ;
+; Mux131~22                               ; 1       ;
+; Mux129~13                               ; 1       ;
+; Mux129~3                                ; 1       ;
+; Mux129~15                               ; 1       ;
+; Mux130~3                                ; 1       ;
+; Mux95~42                                ; 1       ;
 ; PC~88                                   ; 1       ;
 ; PC~87                                   ; 1       ;
 ; PC~86                                   ; 1       ;
@@ -1810,22 +1722,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PC~63                                   ; 1       ;
 ; PC~62                                   ; 1       ;
 ; PC~61                                   ; 1       ;
-; PC[1]~60                                ; 1       ;
+; PC~60                                   ; 1       ;
 ; PC~59                                   ; 1       ;
 ; PC~58                                   ; 1       ;
 ; PC~57                                   ; 1       ;
 ; PC~56                                   ; 1       ;
 ; PC~55                                   ; 1       ;
-; PC~54                                   ; 1       ;
-; PC~53                                   ; 1       ;
+; PC[1]~54                                ; 1       ;
+; comb~14                                 ; 1       ;
+; PC[0]~53                                ; 1       ;
+; comb~13                                 ; 1       ;
 ; PC~52                                   ; 1       ;
 ; PC~51                                   ; 1       ;
 ; PC~50                                   ; 1       ;
-; PC[0]~49                                ; 1       ;
-; comb~20                                 ; 1       ;
+; PC~49                                   ; 1       ;
 ; PC~48                                   ; 1       ;
+; PC~47                                   ; 1       ;
 ; PC~46                                   ; 1       ;
+; PC~45                                   ; 1       ;
 ; PC~44                                   ; 1       ;
+; PC~43                                   ; 1       ;
 ; PC~42                                   ; 1       ;
 ; PC~41                                   ; 1       ;
 ; PC~40                                   ; 1       ;
@@ -1835,136 +1751,140 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PC~36                                   ; 1       ;
 ; PC~35                                   ; 1       ;
 ; PC~34                                   ; 1       ;
-; comb~19                                 ; 1       ;
+; comb~12                                 ; 1       ;
 ; PC~33                                   ; 1       ;
-; comb~18                                 ; 1       ;
+; comb~11                                 ; 1       ;
 ; PC~32                                   ; 1       ;
+; comb~10                                 ; 1       ;
 ; PC~31                                   ; 1       ;
+; Equal2~38                               ; 1       ;
+; Equal2~37                               ; 1       ;
+; Equal2~36                               ; 1       ;
+; Equal2~34                               ; 1       ;
+; Equal2~33                               ; 1       ;
+; Equal2~32                               ; 1       ;
 ; Equal2~31                               ; 1       ;
-; Equal2~30                               ; 1       ;
-; comb~15                                 ; 1       ;
-; comb~14                                 ; 1       ;
-; comb~9                                  ; 1       ;
-; comb~8                                  ; 1       ;
-; Mux74~2                                 ; 1       ;
-; Equal2~23                               ; 1       ;
-; Equal2~22                               ; 1       ;
-; Equal2~21                               ; 1       ;
-; Mux76~2                                 ; 1       ;
-; Equal2~20                               ; 1       ;
+; Equal2~29                               ; 1       ;
+; Equal2~28                               ; 1       ;
+; Mux88~0                                 ; 1       ;
 ; Equal2~19                               ; 1       ;
+; Equal2~18                               ; 1       ;
+; Equal2~17                               ; 1       ;
 ; Equal2~16                               ; 1       ;
+; Equal2~15                               ; 1       ;
+; Equal2~14                               ; 1       ;
+; Equal2~12                               ; 1       ;
+; Equal2~11                               ; 1       ;
 ; Equal2~10                               ; 1       ;
-; Equal2~8                                ; 1       ;
+; Equal2~9                                ; 1       ;
+; Equal2~7                                ; 1       ;
+; Equal2~6                                ; 1       ;
 ; Equal2~5                                ; 1       ;
 ; Equal2~4                                ; 1       ;
 ; Equal2~3                                ; 1       ;
 ; Equal2~2                                ; 1       ;
+; Equal2~1                                ; 1       ;
 ; Equal2~0                                ; 1       ;
-; isjump_A~0                              ; 1       ;
+; comb~0                                  ; 1       ;
 ; HexOut[0]~0                             ; 1       ;
+; always8~16                              ; 1       ;
+; Mux91~2                                 ; 1       ;
+; always8~15                              ; 1       ;
+; Mux82~0                                 ; 1       ;
 ; always8~14                              ; 1       ;
+; Mux89~2                                 ; 1       ;
 ; always8~13                              ; 1       ;
 ; always8~12                              ; 1       ;
-; Mux64~18                                ; 1       ;
 ; always8~11                              ; 1       ;
-; Mux64~16                                ; 1       ;
 ; always8~10                              ; 1       ;
-; Mux64~15                                ; 1       ;
-; Mux64~14                                ; 1       ;
+; Mux66~0                                 ; 1       ;
+; Mux65~2                                 ; 1       ;
+; Mux65~1                                 ; 1       ;
+; Mux65~0                                 ; 1       ;
+; Mux67~1                                 ; 1       ;
 ; always8~9                               ; 1       ;
-; Mux64~13                                ; 1       ;
-; Mux79~1                                 ; 1       ;
-; Mux79~0                                 ; 1       ;
-; always8~8                               ; 1       ;
-; Mux73~0                                 ; 1       ;
-; Mux78~0                                 ; 1       ;
-; always8~7                               ; 1       ;
-; always8~6                               ; 1       ;
-; Mux74~0                                 ; 1       ;
-; Mux75~1                                 ; 1       ;
-; Mux77~0                                 ; 1       ;
-; Mux70~0                                 ; 1       ;
-; always8~5                               ; 1       ;
-; Mux66~1                                 ; 1       ;
-; Mux67~0                                 ; 1       ;
-; Mux76~1                                 ; 1       ;
+; Mux69~1                                 ; 1       ;
 ; Mux69~0                                 ; 1       ;
+; Mux71~0                                 ; 1       ;
+; always8~8                               ; 1       ;
+; Mux72~2                                 ; 1       ;
+; Mux72~1                                 ; 1       ;
+; Mux72~0                                 ; 1       ;
+; Mux73~0                                 ; 1       ;
+; always8~7                               ; 1       ;
+; Mux78~1                                 ; 1       ;
+; Mux78~0                                 ; 1       ;
+; Mux77~0                                 ; 1       ;
+; always8~6                               ; 1       ;
+; Mux76~1                                 ; 1       ;
+; Mux76~0                                 ; 1       ;
+; Mux75~0                                 ; 1       ;
+; always8~5                               ; 1       ;
+; Mux74~1                                 ; 1       ;
+; Mux74~0                                 ; 1       ;
+; Mux79~0                                 ; 1       ;
 ; always8~4                               ; 1       ;
-; Mux64~11                                ; 1       ;
-; wrmem_M~0                               ; 1       ;
 ; always8~3                               ; 1       ;
-; Mux95~33                                ; 1       ;
-; Mux64~9                                 ; 1       ;
-; Mux95~32                                ; 1       ;
-; Mux95~31                                ; 1       ;
-; Mux95~30                                ; 1       ;
-; Mux71~5                                 ; 1       ;
-; Mux71~2                                 ; 1       ;
+; Mux95~39                                ; 1       ;
+; Mux95~38                                ; 1       ;
+; Mux95~37                                ; 1       ;
+; Mux95~36                                ; 1       ;
+; always8~2                               ; 1       ;
+; Mux83~0                                 ; 1       ;
+; Mux81~3                                 ; 1       ;
+; imem~181                                ; 1       ;
+; imem~180                                ; 1       ;
+; imem~179                                ; 1       ;
+; imem~178                                ; 1       ;
+; imem~177                                ; 1       ;
 ; imem~176                                ; 1       ;
 ; imem~175                                ; 1       ;
-; always8~2                               ; 1       ;
-; Mux64~6                                 ; 1       ;
-; Mux64~5                                 ; 1       ;
+; imem~174                                ; 1       ;
 ; imem~173                                ; 1       ;
 ; imem~172                                ; 1       ;
 ; imem~171                                ; 1       ;
-; imem~170                                ; 1       ;
-; imem~169                                ; 1       ;
 ; imem~168                                ; 1       ;
+; imem~167                                ; 1       ;
 ; always8~1                               ; 1       ;
-; Mux64~4                                 ; 1       ;
-; imem~165                                ; 1       ;
+; imem~166                                ; 1       ;
 ; imem~163                                ; 1       ;
-; imem~162                                ; 1       ;
+; always8~0                               ; 1       ;
 ; imem~161                                ; 1       ;
 ; imem~160                                ; 1       ;
 ; imem~159                                ; 1       ;
 ; imem~158                                ; 1       ;
-; Mux87~2                                 ; 1       ;
-; Mux64~3                                 ; 1       ;
+; imem~157                                ; 1       ;
 ; imem~156                                ; 1       ;
+; imem~155                                ; 1       ;
+; imem~154                                ; 1       ;
 ; imem~153                                ; 1       ;
-; imem~151                                ; 1       ;
+; imem~150                                ; 1       ;
 ; imem~149                                ; 1       ;
 ; imem~148                                ; 1       ;
 ; imem~147                                ; 1       ;
-; always8~0                               ; 1       ;
-; Mux64~2                                 ; 1       ;
+; imem~146                                ; 1       ;
 ; imem~145                                ; 1       ;
-; imem~144                                ; 1       ;
+; imem~143                                ; 1       ;
 ; imem~142                                ; 1       ;
 ; imem~141                                ; 1       ;
 ; imem~140                                ; 1       ;
 ; imem~139                                ; 1       ;
-; Mux114~4                                ; 1       ;
-; Mux113~47                               ; 1       ;
-; Mux64~0                                 ; 1       ;
 ; imem~138                                ; 1       ;
-; Mux112~0                                ; 1       ;
 ; imem~137                                ; 1       ;
 ; imem~136                                ; 1       ;
-; imem~135                                ; 1       ;
 ; imem~134                                ; 1       ;
 ; imem~133                                ; 1       ;
 ; imem~132                                ; 1       ;
 ; imem~131                                ; 1       ;
 ; imem~130                                ; 1       ;
 ; imem~129                                ; 1       ;
-; Mux115~18                               ; 1       ;
 ; imem~128                                ; 1       ;
-; imem~127                                ; 1       ;
+; Mux86~1                                 ; 1       ;
+; Mux86~0                                 ; 1       ;
 ; imem~126                                ; 1       ;
-; imem~125                                ; 1       ;
-; imem~124                                ; 1       ;
 ; imem~123                                ; 1       ;
-; imem~122                                ; 1       ;
 ; imem~121                                ; 1       ;
-; imem~120                                ; 1       ;
 ; imem~119                                ; 1       ;
-; imem~118                                ; 1       ;
-; imem~117                                ; 1       ;
-; imem~115                                ; 1       ;
 ; imem~114                                ; 1       ;
 ; imem~113                                ; 1       ;
 ; imem~112                                ; 1       ;
@@ -1974,6 +1894,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; imem~108                                ; 1       ;
 ; imem~107                                ; 1       ;
 ; imem~106                                ; 1       ;
+; imem~105                                ; 1       ;
+; imem~104                                ; 1       ;
+; imem~103                                ; 1       ;
 ; imem~102                                ; 1       ;
 ; imem~101                                ; 1       ;
 ; imem~100                                ; 1       ;
@@ -1982,22 +1905,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; imem~97                                 ; 1       ;
 ; imem~96                                 ; 1       ;
 ; imem~95                                 ; 1       ;
-; imem~94                                 ; 1       ;
 ; imem~93                                 ; 1       ;
+; imem~92                                 ; 1       ;
 ; imem~91                                 ; 1       ;
 ; imem~90                                 ; 1       ;
 ; imem~89                                 ; 1       ;
 ; imem~88                                 ; 1       ;
+; imem~87                                 ; 1       ;
+; imem~86                                 ; 1       ;
 ; imem~85                                 ; 1       ;
 ; imem~84                                 ; 1       ;
+; Mux128~2                                ; 1       ;
 ; imem~83                                 ; 1       ;
+; imem~82                                 ; 1       ;
+; imem~81                                 ; 1       ;
 ; imem~80                                 ; 1       ;
+; imem~79                                 ; 1       ;
+; imem~78                                 ; 1       ;
+; imem~77                                 ; 1       ;
 ; imem~76                                 ; 1       ;
 ; imem~75                                 ; 1       ;
 ; imem~74                                 ; 1       ;
-; imem~73                                 ; 1       ;
-; imem~72                                 ; 1       ;
+; Mux128~1                                ; 1       ;
 ; imem~71                                 ; 1       ;
+; imem~70                                 ; 1       ;
 ; imem~69                                 ; 1       ;
 ; imem~68                                 ; 1       ;
 ; imem~67                                 ; 1       ;
@@ -2005,35 +1936,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; imem~65                                 ; 1       ;
 ; imem~64                                 ; 1       ;
 ; imem~63                                 ; 1       ;
-; imem~62                                 ; 1       ;
 ; imem~61                                 ; 1       ;
-; imem~60                                 ; 1       ;
-; imem~59                                 ; 1       ;
-; imem~58                                 ; 1       ;
-; imem~57                                 ; 1       ;
-; imem~53                                 ; 1       ;
+; Mux128~0                                ; 1       ;
+; imem~56                                 ; 1       ;
+; imem~55                                 ; 1       ;
+; imem~54                                 ; 1       ;
 ; imem~52                                 ; 1       ;
 ; imem~51                                 ; 1       ;
+; imem~50                                 ; 1       ;
 ; imem~48                                 ; 1       ;
 ; imem~47                                 ; 1       ;
 ; imem~46                                 ; 1       ;
-; imem~45                                 ; 1       ;
+; imem~44                                 ; 1       ;
+; imem~43                                 ; 1       ;
 ; imem~42                                 ; 1       ;
+; imem~41                                 ; 1       ;
 ; imem~40                                 ; 1       ;
-; imem~38                                 ; 1       ;
-; imem~37                                 ; 1       ;
-; imem~35                                 ; 1       ;
+; imem~39                                 ; 1       ;
 ; imem~33                                 ; 1       ;
-; imem~32                                 ; 1       ;
 ; imem~31                                 ; 1       ;
-; Mux114~0                                ; 1       ;
 ; imem~30                                 ; 1       ;
 ; imem~29                                 ; 1       ;
 ; imem~28                                 ; 1       ;
 ; imem~27                                 ; 1       ;
 ; imem~26                                 ; 1       ;
+; imem~25                                 ; 1       ;
 ; imem~24                                 ; 1       ;
-; imem~23                                 ; 1       ;
 ; imem~22                                 ; 1       ;
 ; imem~21                                 ; 1       ;
 ; imem~20                                 ; 1       ;
@@ -2041,14 +1969,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; imem~18                                 ; 1       ;
 ; imem~17                                 ; 1       ;
 ; imem~16                                 ; 1       ;
-; imem~13                                 ; 1       ;
-; imem~12                                 ; 1       ;
+; imem~15                                 ; 1       ;
 ; imem~11                                 ; 1       ;
 ; imem~10                                 ; 1       ;
-; imem~9                                  ; 1       ;
-; imem~4                                  ; 1       ;
-; imem~3                                  ; 1       ;
+; imem~8                                  ; 1       ;
+; imem~7                                  ; 1       ;
 ; imem~2                                  ; 1       ;
+; imem~1                                  ; 1       ;
 ; incpc[30]~1                             ; 1       ;
 ; multpc[31]~55                           ; 1       ;
 ; multpc[30]~53                           ; 1       ;
@@ -2078,6 +2005,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; multpc[6]~5                             ; 1       ;
 ; multpc[5]~3                             ; 1       ;
 ; multpc[4]~1                             ; 1       ;
+; multpc[4]~0                             ; 1       ;
 ; Add2~29                                 ; 1       ;
 ; Add2~28                                 ; 1       ;
 ; Add2~27                                 ; 1       ;
@@ -2085,15 +2013,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Add2~25                                 ; 1       ;
 ; Add2~24                                 ; 1       ;
 ; Add2~23                                 ; 1       ;
-; Add2~22                                 ; 1       ;
 ; Add2~21                                 ; 1       ;
-; Add2~20                                 ; 1       ;
 ; Add2~19                                 ; 1       ;
-; Add2~18                                 ; 1       ;
 ; Add2~17                                 ; 1       ;
 ; Add2~16                                 ; 1       ;
 ; Add2~15                                 ; 1       ;
-; Add2~14                                 ; 1       ;
 ; Add2~13                                 ; 1       ;
 ; Add2~12                                 ; 1       ;
 ; Add2~11                                 ; 1       ;
@@ -2116,76 +2040,77 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 879 / 54,004 ( 2 % )   ;
+; Block interconnects         ; 851 / 54,004 ( 2 % )   ;
 ; C16 interconnects           ; 1 / 2,100 ( < 1 % )    ;
-; C4 interconnects            ; 451 / 36,000 ( 1 % )   ;
-; Direct links                ; 114 / 54,004 ( < 1 % ) ;
+; C4 interconnects            ; 439 / 36,000 ( 1 % )   ;
+; Direct links                ; 154 / 54,004 ( < 1 % ) ;
 ; Global clocks               ; 1 / 16 ( 6 % )         ;
-; Local interconnects         ; 336 / 18,752 ( 2 % )   ;
-; R24 interconnects           ; 2 / 1,900 ( < 1 % )    ;
-; R4 interconnects            ; 434 / 46,920 ( < 1 % ) ;
+; Local interconnects         ; 300 / 18,752 ( 2 % )   ;
+; R24 interconnects           ; 4 / 1,900 ( < 1 % )    ;
+; R4 interconnects            ; 447 / 46,920 ( < 1 % ) ;
 +-----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.81) ; Number of LABs  (Total = 42) ;
+; Number of Logic Elements  (Average = 13.29) ; Number of LABs  (Total = 38) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 2                            ;
-; 2                                           ; 3                            ;
+; 1                                           ; 1                            ;
+; 2                                           ; 1                            ;
 ; 3                                           ; 0                            ;
-; 4                                           ; 1                            ;
+; 4                                           ; 0                            ;
 ; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
-; 7                                           ; 0                            ;
-; 8                                           ; 2                            ;
-; 9                                           ; 1                            ;
+; 7                                           ; 2                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 2                            ;
 ; 10                                          ; 2                            ;
-; 11                                          ; 1                            ;
-; 12                                          ; 1                            ;
-; 13                                          ; 1                            ;
-; 14                                          ; 0                            ;
-; 15                                          ; 3                            ;
-; 16                                          ; 25                           ;
+; 11                                          ; 3                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 0                            ;
+; 14                                          ; 1                            ;
+; 15                                          ; 5                            ;
+; 16                                          ; 20                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 0.33) ; Number of LABs  (Total = 42) ;
+; LAB-wide Signals  (Average = 0.45) ; Number of LABs  (Total = 38) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 14                           ;
+; 1 Async. clear                     ; 1                            ;
+; 1 Clock                            ; 16                           ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 13.57) ; Number of LABs  (Total = 42) ;
+; Number of Signals Sourced  (Average = 14.16) ; Number of LABs  (Total = 38) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 2                            ;
-; 2                                            ; 3                            ;
-; 3                                            ; 0                            ;
-; 4                                            ; 1                            ;
+; 1                                            ; 1                            ;
+; 2                                            ; 0                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 0                            ;
 ; 7                                            ; 0                            ;
-; 8                                            ; 2                            ;
-; 9                                            ; 1                            ;
-; 10                                           ; 2                            ;
-; 11                                           ; 1                            ;
-; 12                                           ; 0                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 3                            ;
-; 16                                           ; 14                           ;
-; 17                                           ; 5                            ;
-; 18                                           ; 2                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 4                            ;
+; 10                                           ; 1                            ;
+; 11                                           ; 3                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 1                            ;
+; 15                                           ; 4                            ;
+; 16                                           ; 10                           ;
+; 17                                           ; 4                            ;
+; 18                                           ; 3                            ;
 ; 19                                           ; 2                            ;
-; 20                                           ; 2                            ;
+; 20                                           ; 1                            ;
 ; 21                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
@@ -2193,65 +2118,65 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 7.10) ; Number of LABs  (Total = 42) ;
+; Number of Signals Sourced Out  (Average = 7.45) ; Number of LABs  (Total = 38) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
 ; 1                                               ; 5                            ;
-; 2                                               ; 2                            ;
-; 3                                               ; 3                            ;
-; 4                                               ; 3                            ;
+; 2                                               ; 3                            ;
+; 3                                               ; 2                            ;
+; 4                                               ; 2                            ;
 ; 5                                               ; 3                            ;
-; 6                                               ; 2                            ;
-; 7                                               ; 4                            ;
+; 6                                               ; 3                            ;
+; 7                                               ; 0                            ;
 ; 8                                               ; 4                            ;
 ; 9                                               ; 3                            ;
-; 10                                              ; 5                            ;
-; 11                                              ; 3                            ;
-; 12                                              ; 2                            ;
+; 10                                              ; 2                            ;
+; 11                                              ; 4                            ;
+; 12                                              ; 1                            ;
 ; 13                                              ; 0                            ;
-; 14                                              ; 0                            ;
-; 15                                              ; 1                            ;
-; 16                                              ; 2                            ;
+; 14                                              ; 1                            ;
+; 15                                              ; 4                            ;
+; 16                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 17.74) ; Number of LABs  (Total = 42) ;
+; Number of Distinct Inputs  (Average = 19.79) ; Number of LABs  (Total = 38) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 0                            ;
-; 3                                            ; 1                            ;
+; 3                                            ; 0                            ;
 ; 4                                            ; 1                            ;
-; 5                                            ; 2                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 0                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 2                            ;
 ; 8                                            ; 2                            ;
-; 9                                            ; 3                            ;
-; 10                                           ; 5                            ;
-; 11                                           ; 1                            ;
+; 9                                            ; 1                            ;
+; 10                                           ; 0                            ;
+; 11                                           ; 4                            ;
 ; 12                                           ; 0                            ;
-; 13                                           ; 0                            ;
+; 13                                           ; 1                            ;
 ; 14                                           ; 2                            ;
-; 15                                           ; 1                            ;
-; 16                                           ; 2                            ;
-; 17                                           ; 3                            ;
+; 15                                           ; 4                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 0                            ;
 ; 18                                           ; 0                            ;
-; 19                                           ; 0                            ;
+; 19                                           ; 1                            ;
 ; 20                                           ; 0                            ;
 ; 21                                           ; 0                            ;
 ; 22                                           ; 2                            ;
 ; 23                                           ; 1                            ;
-; 24                                           ; 1                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 2                            ;
-; 27                                           ; 1                            ;
-; 28                                           ; 3                            ;
-; 29                                           ; 3                            ;
-; 30                                           ; 4                            ;
-; 31                                           ; 1                            ;
+; 24                                           ; 2                            ;
+; 25                                           ; 1                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 1                            ;
+; 29                                           ; 2                            ;
+; 30                                           ; 7                            ;
+; 31                                           ; 3                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -2320,8 +2245,8 @@ Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Info (128000): Starting physical synthesis optimizations for speed
 Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
-Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 352 ps
-Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:01
+Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 170 ps
+Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:00
 Warning (15709): Ignored I/O standard assignments to the following nodes
     Warning (15710): Ignored I/O standard assignment to node "AUD_ADCDAT"
     Warning (15710): Ignored I/O standard assignment to node "AUD_ADCLRCK"
@@ -2655,17 +2580,17 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (128000): Starting physical synthesis optimizations for speed
 Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
-Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 759 ps
+Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
 Info (128002): Starting physical synthesis algorithm logic and register replication
 Info (128003): Physical synthesis algorithm logic and register replication complete: estimated slack improvement of 0 ps
 Info (128002): Starting physical synthesis algorithm fanout splitting
 Info (128003): Physical synthesis algorithm fanout splitting complete: estimated slack improvement of 0 ps
-Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:07
+Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X0_Y0 to location X11_Y13
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:08
-Info (11888): Total time spent on timing analysis during the Fitter is 1.55 seconds.
+    Info (170196): Router estimated peak interconnect usage is 4% of the available device resources in the region that extends from location X12_Y14 to location X24_Y27
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:07
+Info (11888): Total time spent on timing analysis during the Fitter is 1.06 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 46 output pins without output pin load capacitance assignment
     Info (306007): Pin "LEDR[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2721,10 +2646,10 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/Kaitlin/Documents/GitHub/Project_3/Project3_restored/Project3-Optimize.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 331 warnings
-    Info: Peak virtual memory: 637 megabytes
-    Info: Processing ended: Fri Mar 28 16:24:34 2014
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 633 megabytes
+    Info: Processing ended: Fri Mar 28 17:47:40 2014
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:16
 
 
 +----------------------------+

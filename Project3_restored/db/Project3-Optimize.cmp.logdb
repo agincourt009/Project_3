@@ -1,0 +1,3 @@
+v1
+GLOBAL_SIGNAL_SINGLE_POINT_ASSIGNMENT,,,
+GLOBAL_SIGNAL_SINGLE_POINT_ASSIGNMENT,Pll:pll|altpll:altpll_component|_clk0,Global Clock,

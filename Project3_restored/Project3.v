@@ -105,9 +105,9 @@ module Project3(SW,KEY,LEDR,LEDG,HEX0,HEX1,HEX2,HEX3,CLOCK_50);
 	// Register-read
 //	(* ram_init_file = "Regs.mif" *)
 	(* ram_init_file = "Regs.mif", ramstyle="logic" *)
-	reg [(DBITS-1):0] regs[31:0];
+	reg [(DBITS-1):0] regs[15:0];
 	// Two read ports, always using rx and ry for register numbers
-	wire [4:0] rregno1_D=rs_D, rregno2_D=rt_D, memvaladdr = rt_D;
+	wire [3:0] rregno1_D=rs_D, rregno2_D=rt_D, memvaladdr = rt_D;
 	wire [(DBITS-1):0] regval1_D=regs[rregno1_D];
 	wire [(DBITS-1):0] regval2_D=regs[rregno2_D];
 	wire [(DBITS-1):0] sxtimm = {{(DBITS-IMMBITS){rawimm_D[IMMBITS-1]}},rawimm_D};
@@ -151,7 +151,7 @@ module Project3(SW,KEY,LEDR,LEDG,HEX0,HEX1,HEX2,HEX3,CLOCK_50);
 	always @(selaluout_D or aluout_A)begin
 		alures <= {DBITS{1'bX}};
 		if(selaluout_D)
-			alures <= aluout_A;
+			alures <= aluout_A;	
 	end
 	
 	assign memaddr = LdMem? alures:{DBITS{1'bX}} ;
@@ -240,6 +240,9 @@ module Project3(SW,KEY,LEDR,LEDG,HEX0,HEX1,HEX2,HEX3,CLOCK_50);
 		else if(selmemout_D)
 			wregval_M <= memout_M;
 	end
+	
+	always @(wrreg_M)
+		wregno_M <= wregno_D;
 	
 	always @(posedge clk)
 		if(wrreg_M&&lock)
