@@ -230,10 +230,17 @@ module Project3(SW,KEY,LEDR,LEDG,HEX0,HEX1,HEX2,HEX3,CLOCK_50);
 		(memaddr_M==ADDRKEY)?{12'b0,~KEY}:
 		(memaddr_M==ADDRSW)? { 6'b0,SW}:
 		32'hDEADBEEF;
-
-	// TODO: Decide what gets written into the destination register (wregval_M)
 	
 	reg [(DBITS-1):0] wregval_M, wregno_M;
+	
+	always @(wrreg_M or isjump_A or selmemout_D)begin
+		wregval_M <= alures;
+		if(isjump_A)
+			wregval_M <= pcplus_D;
+		else if(selmemout_D)
+			wregval_M <= memout_M;
+	end
+	
 	always @(posedge clk)
 		if(wrreg_M&&lock)
 			regs[wregno_M]<=wregval_M;
@@ -271,8 +278,8 @@ module Project3(SW,KEY,LEDR,LEDG,HEX0,HEX1,HEX2,HEX3,CLOCK_50);
 				{aluimm_D, alufunc_A, selaluout_D, selmemout_D, selpcplus_D, wrmem_M, LdMem}=
 				{	1'b1,			5'b0,			1'b1,			1'b0,				1'b1,		1'b1,		1'b1};
 		OP1_LW:
-				{aluimm_D, alufunc_A, selaluout_D, selmemout_D, selpcplus_D, wrmem_M, wrreg_M}=
-				{	1'b1,			5'b0,			1'b1,			1'b1,				1'b1,		1'b1,		1'b1};
+				{aluimm_D, alufunc_A, selaluout_D, selmemout_D, selpcplus_D, wrreg_M}=
+				{	1'b1,			5'b0,			1'b1,			1'b1,				1'b1,		1'b1};
 		OP1_JAL:
 				{aluimm_D, alufunc_A, selaluout_D, selmemout_D, selpcplus_D, isjump_A, wrreg_M}=
 				{	1'b1,			5'b0,			1'b1,			1'b0,				1'b0,		1'b1,		1'b1};	
